@@ -1,0 +1,28 @@
+@if (results()) {
+    <H1>{{results()![0].race.location}}: {{results()![0].race.nbrparticipants}} participants</H1>
+    <H1>Nombre d'Antilob : {{results()![0].race.memberCount}}</H1>
+    <H1>Classement</H1>    
+    <div id="ClassementContainer">
+      <table id="classement" cellspacing="4" >
+        <tbody id="raceListBody">
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Place</th>
+            <th>temps</th>	
+            <th>Points</th>	        
+          </tr>
+          @for(result of results()!; track result.member.id; let index=$index){
+            <tr class="classementDetail">
+              <td>{{result.member.lastname}}</td>
+              <td>{{result.member.firstname}}</td>
+              <td>{{result.place}}</td>
+              <td>{{result.time}}</td>	
+              <td>{{result.points.valueOf() | number: '2.1-3'}}</td>	         
+            </tr>
+          }
+          </tbody>
+      </table>      
+    </div>
+
+} 

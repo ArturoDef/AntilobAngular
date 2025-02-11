@@ -1,0 +1,82 @@
+<div id="main">
+  <div id="main2">
+      <left-column></left-column>
+      <div id="rightColumn">
+          <table class="rcMain" cellpadding="0" cellspacing="0">
+              <tbody>
+              <!-- *****************  -->
+              <!-- BANDEAU SUPERIEUR  -->
+              <!-- *****************  -->
+
+              <tr>
+                  <!-- colonne de gauche -->
+
+                  <!-- ******* -->
+                  <!-- Header  -->
+                  <!-- *****  -->
+                  <td class="header">
+                      <html-top></html-top>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="menu">
+                      <div id="menuContainer">
+                          <menu style="padding-left:0;padding-top:0;margin-top: 0;margin-bottom: 0;"></menu>
+                      </div>
+                  </td>
+              </tr>
+              <!-- *************  -->
+              <!-- LES DERNIERES  -->
+              <!-- *************  -->
+              <tr>
+                  <td class="title">
+                      <img src="/assets/images/Signet_lesdernieres.jpg" alt="" style="width: 81px; height: 39px;">
+                  </td>
+              </tr>
+
+              <tr>
+                  <td >
+                      <div  id="dernierescontainer" style="margin-left:10px"><last-results></last-results></div>
+                  </td>
+                  <td><br>
+                  </td>
+                  <td><br>
+                  </td>
+              </tr>
+              <!-- ******************************************************************************  -->
+              <!-- EVENEMENTS                                                                      -->
+              <!-- ******************************************************************************  -->
+
+              <!-- *************  -->
+              <!--  Signet        -->
+              <!-- *************  -->
+
+              <tr>
+                  <td class="title">
+                      <img src="/assets/images/Signet_evenement.jpg" alt="" style="width: 81px; height: 39px;"/>
+                      
+                  </td>
+              </tr>
+              <!-- *************  -->
+              <!--  Contenu        -->
+              <!-- *************  -->
+              <tr>
+                  <!-- contenu principal -->
+                  <td class="eventContent">
+                      <table style="width:100%">
+                          <tbody>
+                          <tr>
+                              <td class="left" ><div th:insert="evenements.html::event-list"></div></td>
+                              <td class="right" ></td>
+                          </tr>
+                          </tbody>
+                      </table>
+
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+

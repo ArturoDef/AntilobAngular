@@ -1,0 +1,33 @@
+<style>
+  #tableHeaderTR{
+      outline: 2px solid black;
+  }
+</style>
+
+<H1> Calendrier</H1>
+
+<div id="tableCalendrierContainer">
+  <table id="calendrier" cellspacing="0" >
+      <tbody id="raceListBody">
+
+      <tr id="tableHeaderTR">
+          <th>Lieu</th>
+          <th>Date</th>
+          <th>distance</th>
+          <th>Challenge</th>
+      </tr>
+
+
+      @for(race of  raceList() ; track race.id; let index=$index){
+      <tr class="calendrierDetail">
+        <td>@if (race.mainRaceId == 0) {  {{race.location}} }</td>
+        <td>@if (race.mainRaceId == 0) {  {{race.date}} }</td>
+        <td>{{race.distance}}</td>	
+        <td>{{race.challenge.shortname}}</td>	
+        <td>@if (race.url!="") {<a href="{{race.url}}"><img src="/assets/images/urlcourse.png" style="width:1.4em"></a> }</td>  
+      </tr>
+    }
+      </tbody>
+  </table>
+  
+</div>

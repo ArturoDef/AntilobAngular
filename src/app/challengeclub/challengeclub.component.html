@@ -1,0 +1,28 @@
+<H1 class="maintitle">Classement Challenge club</H1>
+<div id="ClassementContainer">
+<table id="classement" cellspacing="4" >
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Nbre de courses</th>		  
+    <th>Distance totale</th>		  	  
+    <th>Points</th>		
+    <th></th>		  	
+  </tr>
+  @for(row of challengeClubList(); track row.id; let index=$index){
+  <tr>
+    <td>{{row.lastname}}</td>
+    <td>{{row.firstname}}</td>
+    <td style="text-align: center;">{{row.nbRace}}</td>		  
+    <td>{{row.distance}}</td>		
+    <td style="font-weight: bold;">{{row.sumpoints}}</td>		  	  
+    <td style="text-align:center">
+      <a href="/page/memberresults/{{row.id}}">
+        <div style="display:inline-block;font-weight: bold;"><img src="/assets/images/loupe.png" style="height:1em; display:inline-block;" id="imgLoupe{{row.lastname}}" /></div>
+       </a> 
+  </tr>
+}
+</table>
+  
+
+

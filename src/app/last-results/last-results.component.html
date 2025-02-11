@@ -1,0 +1,26 @@
+<div id="lastresult-list">
+  <div id="lastresult-list">  
+    @for(race of  groupedData() ; track race[0].raceName) {
+        <h3 style="text-decoration: underline;">
+           {{race[0].raceName+" : "+race[0].location+" "+race[0].distance+" km ("+race[0].nbrParticipants+" participants)" }}
+
+        </h3>
+        <table>    
+          <tbody>
+            <tr>
+              <th>Nom</th>
+              <th>Place</th>
+              <th>Temps</th>
+          </tr>        
+          @for(result of race; track result.runnerLastname) {
+          <tr>
+            <td>{{result.runnerLastname}} {{result.runnerFirstname}}</td>
+            <td>{{result.place}}</td>
+            <td>{{result.time}}</td>    
+          </tr>          
+          }
+      </tbody>
+    </table>
+  }        
+  </div>
+</div>

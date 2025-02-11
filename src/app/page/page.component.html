@@ -1,0 +1,52 @@
+
+<div id="main">
+    <div id="main2">
+      <left-column></left-column>
+<!--        <?php } ?> -->
+        <div id="rightColumn">
+            <table class="rcMain" cellpadding="0" cellspacing="0">
+                <tbody>
+                <!-- *****************  -->
+                <!-- BANDEAU SUPERIEUR  -->
+                <!-- *****************  -->
+
+                <tr>
+                    <!-- colonne de gauche -->
+
+                    <!-- ******* -->
+                    <!-- Header  -->
+                    <!-- *****  -->
+                    <td class="header">
+                        <html-top></html-top>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu">
+                      <div id="menuContainer">
+                        <menu style="padding-left:0;padding-top:0;margin-top: 0;margin-bottom: 0;"></menu>
+                    </div>
+                </tr>
+                <tr>
+                    <!-- contenu principal -->
+                    <td style="text-align: center; background-color: rgba(204, 204, 204, 0.2); margin-left: 29px; vertical-align:top;">
+                        <table style="width:100%">
+                          <tbody>
+                            <tr>
+                                 <td style="width:95%;vertical-align:top;" >
+                                      <router-outlet></router-outlet>
+                                  </td>
+                                <td style="width:25%;vertical-align:top; height:1000px;"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
